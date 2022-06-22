@@ -1,15 +1,21 @@
  # Agoric React App
 
-This is a React App that connects to Agoric wallet and interacts with smart contract. 
+This is a React App that connects to Agoric Wallet and interacts with smart contract. 
 
-Before you run the app, make sure that: 
-
+## Before you begin...
+Before you run this app, make sure that: 
 1. Local Agoric chain is running
-2. Smart contract is deployed to the local Agoric chain
+2. Smart Contract is deployed to the local Agoric chain
 3. Agoric Wallet is accessible from your browser 
 
-To run the app, run this command at the root of `react-app` folder:
+For instruction how to do that, follow this [README](https://github.com/RBFLabs/agoric-react-app-starter/blob/main/README.md).
+
+## Run the App
+Run the app using this command:
 
  ```
- yarn run dev
+ yarn dev
  ```
+
+## React Components
+This app uses [@rbflabs/agoric-react-components](https://www.npmjs.com/package/@rbflabs/agoric-react-components) to make the interaction with Agoric Wallet easier.

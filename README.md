@@ -2,13 +2,15 @@
 
 This repo helps your start with the development of [Agoric](https://agoric.com/) dApps. This repo contains:
 
-- Local Agoric Chain
-- Simple Agoric smart contract that can mint some tokens 
-- React App in TypeScript (build with [Vite](https://vitejs.dev/) instead of `create-react-app`)
-
+- [Local Agoric Chain](https://github.com/RBFLabs/agoric-react-app-starter/tree/main/agoric)
+- [Smart Contract](https://github.com/RBFLabs/agoric-react-app-starter/blob/main/agoric/contract/src/contract.js) that can mint Moola tokens 
+- [React App](https://github.com/RBFLabs/agoric-react-app-starter/tree/main/react-app) written in TypeScript (built with [Vite](https://vitejs.dev/), not using [create-react-app](https://create-react-app.dev/))
 ## Prerequisites
 
 Install Agoric SDK from [Agoric repository](https://github.com/Agoric/Agoric-sdk) by executing the following steps:
+
+> **Note**
+> We recommend using Node 16 (you can use [nvm](https://github.com/nvm-sh/nvm) to switch between different Node versions).
 
 ```bash
 node --version # 14.15.0 or higher
@@ -24,13 +26,43 @@ agoric --version
 
 For more detail check the Agoric [documentation](https://agoric.com/documentation/getting-started/before-using-agoric.html).
 
+<br/>
+
 ## Getting Started
+
+### Clone / Degit the repository. Or use it as a Template
+
+#### Clone 
+
+- Clone the repo: `git clone https://github.com/RBFLabs/agoric-react-app-starter.git`
+- Enter the project folder: `cd agoric-react-app-starter` 
+
+#### Degit
+
+`degit` downloads the repo without git history attached to it (without `.git` file).
+
+- Install [degit](https://github.com/Rich-Harris/degit): `npm install -g degit`
+- Degit the repo: `degit https://github.com/RBFLabs/agoric-react-app-starter my-agoric-react-app`
+- Enter the project folder: `cd my-agoric-react-app`
+
+#### Template
+
+GitHub's [template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository) allows you to use this repo as a template for your own app. Basically it creates a new repo with the same files and directory structure. 
+
+- Login to you GitHub account
+- Make sure you are at the root of this repo's [GitHub website](https://github.com/RBFLabs/agoric-react-app-starter)
+- Find and click on the *"Use this template"* button 
+
+<br/>
+
+## Deploy the contract and run the React App 
 
 In all of the following `<github-root>` is the directory with the clone of this repository.
 
-Make sure you are running Node 16 (you can use [nvm](https://github.com/nvm-sh/nvm) to switch between different Node versions).
-
 ### 1. Run the local Agoric chain
+
+> **Note**
+> Make sure you are using the same Node version as you used to build Agoric SDK.
 
 - Open terminal #1
 - `cd <github-root>/agoric`
@@ -68,10 +100,10 @@ After successful completion, the deployment script should print out a message th
 -- Instance Board Id: board01422
 -- Token Issuer Board Id: board04719
 -- Token Brand Board Id: board06120
-writing .../react-app/src/dAppConstants.mjs
+writing .../react-app/src/dAppConstants.mts
 ```
 
-This deploys the contracts and generates `dAppConstants.mjs` file in `react-app/src` folder.
+This deploys the contract and generates `dAppConstants.mts` file in `react-app/src` folder.
 
 ### 4. Run the React App
 
@@ -79,8 +111,5 @@ Open terminal #3
 
 - `cd <github-root>/react-app`
 - `yarn install`
-- `yarn run dev`
-
-You need to run `yarn dev` from the root folder, otherwise linked packages in this monorepo will not get resolved properly.
-
+- `yarn dev`
 

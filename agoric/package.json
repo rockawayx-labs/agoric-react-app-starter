@@ -1,8 +1,8 @@
 {
-  "name": "example",
+  "name": "agoric-example",
   "private": true,
   "version": "1.0.0",
-  "description": "Example React app to test Agoric components",
+  "description": "Agoric chain for Agoric React App Starter",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
